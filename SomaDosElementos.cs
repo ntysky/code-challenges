@@ -15,6 +15,12 @@ namespace HackerRank
 
             int[] lista = Array.ConvertAll(input.Split(","), int.Parse);
 
+            if (lista.Length > 1000)
+            {
+                Console.WriteLine("A lista não pode conter mais de 1000 itens.");
+                return;
+            }
+
             int result = Soma(lista);
 
             Console.WriteLine(result);
