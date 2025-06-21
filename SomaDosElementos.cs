@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace leetcode
+{
+    public class SomaDosElementos
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Informe os itens separados por vírgula:");
+            string input = Console.ReadLine();
+
+            int[] lista = Array.ConvertAll(input.Split(","), int.Parse);
+
+            int result = Soma(lista);
+
+            Console.WriteLine(result);
+            
+        }
+        static int Soma(int[] lista) 
+        {
+            int result = 0;
+
+            for (int i = 0; i < lista.Length; i++)
+            {
+                result = result + lista[i];
+            }
+            return result;
+        }
+
+    }
+
+}
